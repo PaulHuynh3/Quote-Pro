@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuoteView" customModule="QuoteProStarter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman02" translatesAutoresizingMaskIntoConstraints="NO" id="Wtz-PQ-cEO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDT-ak-xlN">
+                    <rect key="frame" x="0.0" y="559" width="375" height="108"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ytY-4c-ATW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmD-VH-Jiw" customClass="CameraButton" customModule="QuoteProStarter" customModuleProvider="target">
+                                <rect key="frame" x="152" y="24" width="71" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Zlm-u2-VGF"/>
+                                    <constraint firstAttribute="width" constant="71" id="l5g-t3-9bx"/>
+                                </constraints>
+                                <state key="normal" image="CameraPhoto"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corrnerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cmD-VH-Jiw" secondAttribute="trailing" constant="152" id="7q2-bz-7cB"/>
+                            <constraint firstItem="cmD-VH-Jiw" firstAttribute="leading" secondItem="ytY-4c-ATW" secondAttribute="leading" constant="152" id="CDa-h5-rn5"/>
+                            <constraint firstAttribute="bottom" secondItem="cmD-VH-Jiw" secondAttribute="bottom" constant="23" id="a6y-ud-BO9"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="108" id="N3B-Ga-A5B"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opw-tb-1pR">
+                    <rect key="frame" x="0.0" y="273.5" width="375" height="120"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1d2-lf-2iL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-o0-qVr">
+                                <rect key="frame" x="8" y="8" width="359" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rze-o0-qVr" firstAttribute="leading" secondItem="1d2-lf-2iL" secondAttribute="leading" constant="8" id="3UY-70-X02"/>
+                            <constraint firstItem="Rze-o0-qVr" firstAttribute="top" secondItem="1d2-lf-2iL" secondAttribute="top" constant="8" id="Un1-4t-ZDR"/>
+                            <constraint firstAttribute="bottom" secondItem="Rze-o0-qVr" secondAttribute="bottom" constant="8" id="cBK-GS-D29"/>
+                            <constraint firstAttribute="trailing" secondItem="Rze-o0-qVr" secondAttribute="trailing" constant="8" id="eNi-dg-k03"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="KQm-NK-hdc"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="opw-tb-1pR" secondAttribute="trailing" id="3rd-PG-tiY"/>
+                <constraint firstItem="Wtz-PQ-cEO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8oP-MW-RKi"/>
+                <constraint firstAttribute="bottom" secondItem="zDT-ak-xlN" secondAttribute="bottom" id="G09-Ov-ian"/>
+                <constraint firstItem="opw-tb-1pR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SX0-Fg-nWc"/>
+                <constraint firstItem="opw-tb-1pR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vbc-Ba-mqX"/>
+                <constraint firstAttribute="trailing" secondItem="zDT-ak-xlN" secondAttribute="trailing" id="edg-1M-wft"/>
+                <constraint firstItem="zDT-ak-xlN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f39-uD-Nfy"/>
+                <constraint firstAttribute="trailing" secondItem="Wtz-PQ-cEO" secondAttribute="trailing" id="kJj-42-sZf"/>
+                <constraint firstItem="Wtz-PQ-cEO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rLG-H2-eBT"/>
+                <constraint firstAttribute="bottom" secondItem="Wtz-PQ-cEO" secondAttribute="bottom" id="vY9-hY-BDe"/>
+            </constraints>
+            <connections>
+                <outlet property="cameraButton" destination="cmD-VH-Jiw" id="Wsp-yW-HjY"/>
+                <outlet property="imageView" destination="Wtz-PQ-cEO" id="8sz-da-Bij"/>
+                <outlet property="label" destination="Rze-o0-qVr" id="kDH-4L-E5C"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CameraPhoto" width="198" height="136"/>
+        <image name="batman02" width="740" height="463"/>
+    </resources>
+</document>
