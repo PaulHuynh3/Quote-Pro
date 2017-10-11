@@ -25,10 +25,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmD-VH-Jiw" customClass="CameraButton" customModule="QuoteProStarter" customModuleProvider="target">
-                                <rect key="frame" x="152" y="24" width="71" height="61"/>
+                                <rect key="frame" x="153" y="24" width="68" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="Zlm-u2-VGF"/>
-                                    <constraint firstAttribute="width" constant="71" id="l5g-t3-9bx"/>
+                                    <constraint firstAttribute="height" constant="61" id="18t-bJ-kez"/>
+                                    <constraint firstAttribute="width" constant="68" id="Lb3-U3-jBv"/>
                                 </constraints>
                                 <state key="normal" image="CameraPhoto"/>
                                 <userDefinedRuntimeAttributes>
@@ -45,9 +45,10 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cmD-VH-Jiw" secondAttribute="trailing" constant="152" id="7q2-bz-7cB"/>
-                            <constraint firstItem="cmD-VH-Jiw" firstAttribute="leading" secondItem="ytY-4c-ATW" secondAttribute="leading" constant="152" id="CDa-h5-rn5"/>
-                            <constraint firstAttribute="bottom" secondItem="cmD-VH-Jiw" secondAttribute="bottom" constant="23" id="a6y-ud-BO9"/>
+                            <constraint firstItem="cmD-VH-Jiw" firstAttribute="centerX" secondItem="ytY-4c-ATW" secondAttribute="centerX" id="A49-0g-fDj"/>
+                            <constraint firstItem="cmD-VH-Jiw" firstAttribute="top" secondItem="ytY-4c-ATW" secondAttribute="top" constant="24" id="Hyn-M9-ILp"/>
+                            <constraint firstAttribute="trailing" secondItem="cmD-VH-Jiw" secondAttribute="trailing" constant="154" id="K11-gq-I0M"/>
+                            <constraint firstItem="cmD-VH-Jiw" firstAttribute="leading" secondItem="ytY-4c-ATW" secondAttribute="leading" constant="153" id="lCX-1v-xJX"/>
                         </constraints>
                     </view>
                     <constraints>
