@@ -68,9 +68,9 @@ class AddViewController: UIViewController {
     
     @IBAction func changePictureTapped(_ sender: UIButton) {
         NetworkRequest.fetchImage { (data:Data) in
-//            OperationQueue.main.addOperation {
+            OperationQueue.main.addOperation {
             self.imageView.image = UIImage(data: data)
-//            }
+            }
  
         }
         
