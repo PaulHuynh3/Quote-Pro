@@ -59,7 +59,10 @@ class NetworkRequest {
             
             
             //save the quoteObject as the completion handler
-            completionHandler(quote)
+            if (quote != nil) {
+                completionHandler(quote)
+            }
+            
         })
         task.resume()
         session.finishTasksAndInvalidate()
@@ -95,6 +98,8 @@ class NetworkRequest {
             //save the data image into the completion handler and then setting it there..
             do {
                 let data = try Data(contentsOf: url)
+                
+                //save image in the completion block
                 completion(data)
             }
             catch {

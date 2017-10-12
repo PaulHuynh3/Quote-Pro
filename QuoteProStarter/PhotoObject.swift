@@ -10,17 +10,7 @@ import Foundation
 
 class PhotoObject {
 
-    var image : (NSData)?
-    
-    init(image:NSData) {
-        self.image = image
-    }
-    
-    
-    
-    
-    
-    
+    //not being used right now.
     
     
 }
