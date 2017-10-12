@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-o0-qVr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-o0-qVr">
                                 <rect key="frame" x="8" y="8" width="359" height="104"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
@@ -79,6 +79,24 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="KQm-NK-hdc"/>
                     </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfu-SR-gNN">
+                    <rect key="frame" x="87" y="401" width="217" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="ahJ-3U-YnG">
+                        <rect key="frame" x="0.0" y="0.0" width="217" height="47"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5k-KK-QGs">
+                                <rect key="frame" x="8" y="18" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
                     <blurEffect style="light"/>
                 </visualEffectView>
             </subviews>
@@ -98,7 +116,8 @@
             <connections>
                 <outlet property="cameraButton" destination="cmD-VH-Jiw" id="Wsp-yW-HjY"/>
                 <outlet property="imageView" destination="Wtz-PQ-cEO" id="8sz-da-Bij"/>
-                <outlet property="label" destination="Rze-o0-qVr" id="kDH-4L-E5C"/>
+                <outlet property="quote" destination="Rze-o0-qVr" id="ZIV-Xl-vtZ"/>
+                <outlet property="quoteAuthor" destination="D5k-KK-QGs" id="du9-xw-a0P"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>

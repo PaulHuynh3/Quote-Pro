@@ -12,6 +12,8 @@ class MainViewCell: UITableViewCell {
 
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var quoteAuthorLabel: UILabel!
+    @IBOutlet weak var saveImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

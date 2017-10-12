@@ -12,21 +12,23 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     var arrayOfQuotes: [QuoteObject] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkRequest.generateRandomQuote{ (result:QuoteObject) in
-            self.arrayOfQuotes = [result]
-            OperationQueue.main.addOperation{
-                self.tableView.reloadData()
-            }
-            
+    }
+    
+    
+    //Attached to save button. When save button is click this action is triggered..
+    //unwind allows you to access another viewController and pull the information from there.
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        if let addViewController = segue.source as? AddViewController {
+            arrayOfQuotes.append(addViewController.quoteObject!)
+            tableView.reloadData()
+
         }
-        
     }
     
     
@@ -50,14 +52,16 @@ class MainViewController: UIViewController, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier:cellIdentifier, for:indexPath) as? MainViewCell  else
         {
-            
             fatalError()
         }
         
         let quotes = arrayOfQuotes[indexPath.row]
         
+        //when i use the unwind for segue pulling just the QuoteObject itself...
+        //indexforpath is responsible for the object and breaks it into quote, quoteAuthor, image when the object itself is return
         cell.quoteLabel.text = quotes.quote
         cell.quoteAuthorLabel.text = quotes.quoteAuthor
+        cell.saveImageView.image = quotes.image
         
         
         return cell
@@ -65,14 +69,24 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     
     
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        if (segue.identifier  == "DetailedSegue"){
+            
+            
+         //has to identify the view controller
+        let detailedView = segue.destination as! ViewController
+            
+            //set object equal to the identified row.
+        detailedView.quoteObject = arrayOfQuotes[(self.tableView.indexPathForSelectedRow?[0])!]
+            
+        }
+        
+        
      }
-     */
+    
+
+ 
     
 }

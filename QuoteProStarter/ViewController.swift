@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var quoteObject:QuoteObject?
+        
+//        didSet{
+//            quoteView.quote.text = quoteObject?.quote
+//            quoteView.quoteAuthor.text = quoteObject?.quoteAuthor
+//            quoteView.imageView.image = quoteObject?.image
+//        }
+
+    
     var quoteView: QuoteView!
     
     override func viewDidLoad() {
@@ -17,6 +26,11 @@ class ViewController: UIViewController {
         quoteView = Bundle.main.loadNibNamed("QuoteView", owner: nil)?.first as? QuoteView
         view = quoteView
         quoteView.cameraButton.addTarget(self, action: #selector(buttonTapped(sender:)) , for: .touchUpInside)
+        
+        quoteView.quote.text = quoteObject?.quote
+        quoteView.quoteAuthor.text = quoteObject?.quoteAuthor
+        quoteView.imageView.image = quoteObject?.image
+        
     }
     
     @objc func buttonTapped(sender: UIButton) {
@@ -28,6 +42,14 @@ class ViewController: UIViewController {
         let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activity, animated: true)
     }
+    
+
+
+
+    
+    
+    
+    
 }
 
 extension UIImage {

@@ -10,7 +10,6 @@
 		DADC7BED1F8EA3B000A66AA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BEC1F8EA3B000A66AA1 /* MainViewController.swift */; };
 		DADC7BEF1F8EA65F00A66AA1 /* QuoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BEE1F8EA65F00A66AA1 /* QuoteObject.swift */; };
 		DADC7BF11F8EA75F00A66AA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BF01F8EA75F00A66AA1 /* NetworkRequest.swift */; };
-		DADC7BF31F8EAAD200A66AA1 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BF21F8EAAD200A66AA1 /* PhotoObject.swift */; };
 		DADC7BF51F8ECA0200A66AA1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BF41F8ECA0200A66AA1 /* AddViewController.swift */; };
 		DADC7BF71F8EDFA200A66AA1 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC7BF61F8EDFA200A66AA1 /* MainViewCell.swift */; };
 		DAE487E31F8E6A46008D14EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE487E21F8E6A46008D14EE /* AppDelegate.swift */; };
@@ -27,7 +26,6 @@
 		DADC7BEC1F8EA3B000A66AA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DADC7BEE1F8EA65F00A66AA1 /* QuoteObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteObject.swift; sourceTree = "<group>"; };
 		DADC7BF01F8EA75F00A66AA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		DADC7BF21F8EAAD200A66AA1 /* PhotoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
 		DADC7BF41F8ECA0200A66AA1 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		DADC7BF61F8EDFA200A66AA1 /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		DAE487DF1F8E6A46008D14EE /* QuoteProStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteProStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				DADC7BEE1F8EA65F00A66AA1 /* QuoteObject.swift */,
-				DADC7BF21F8EAAD200A66AA1 /* PhotoObject.swift */,
 				DADC7BF01F8EA75F00A66AA1 /* NetworkRequest.swift */,
 			);
 			name = Model;
@@ -66,6 +63,8 @@
 		DADC7BEA1F8E861B00A66AA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAE487E41F8E6A46008D14EE /* ViewController.swift */,
+				DAE487F61F8E6AC8008D14EE /* QuoteView.swift */,
 				DAE487F41F8E6AAE008D14EE /* QuoteView.xib */,
 				DAE487E61F8E6A46008D14EE /* Main.storyboard */,
 			);
@@ -78,8 +77,6 @@
 				DAE487F81F8E74BE008D14EE /* CameraButton.swift */,
 				DADC7BEC1F8EA3B000A66AA1 /* MainViewController.swift */,
 				DADC7BF61F8EDFA200A66AA1 /* MainViewCell.swift */,
-				DAE487E41F8E6A46008D14EE /* ViewController.swift */,
-				DAE487F61F8E6AC8008D14EE /* QuoteView.swift */,
 				DADC7BF41F8ECA0200A66AA1 /* AddViewController.swift */,
 			);
 			name = Controller;
@@ -196,7 +193,6 @@
 				DAE487F91F8E74BE008D14EE /* CameraButton.swift in Sources */,
 				DADC7BF71F8EDFA200A66AA1 /* MainViewCell.swift in Sources */,
 				DADC7BEF1F8EA65F00A66AA1 /* QuoteObject.swift in Sources */,
-				DADC7BF31F8EAAD200A66AA1 /* PhotoObject.swift in Sources */,
 				DAE487E31F8E6A46008D14EE /* AppDelegate.swift in Sources */,
 				DADC7BED1F8EA3B000A66AA1 /* MainViewController.swift in Sources */,
 			);

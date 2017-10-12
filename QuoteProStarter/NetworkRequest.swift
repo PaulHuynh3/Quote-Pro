@@ -73,15 +73,19 @@ class NetworkRequest {
     
     static func fetchImage(completion: @escaping (Data) ->() ){
         
+        //session
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
         
-        guard let URL = URL(string: "http://lorempixel.com/200/300/fashion/") else {return}
+        guard let URL = URL(string: "http://lorempixel.com/200/300/nature/") else {return}
         var request = URLRequest(url: URL)
         request.httpMethod = "GET"
         
+        //download task
         let downloadTask = session.downloadTask(with: request) { (url: URL?, response: URLResponse?, error: Error?) in
             
+            
+        //error checking
             if let error = error {
                 print(#line, error.localizedDescription)
                 return
@@ -95,7 +99,7 @@ class NetworkRequest {
                 return
             }
             
-            //save the data image into the completion handler and then setting it there..
+        //save the "data" which is an image to the completion block.
             do {
                 let data = try Data(contentsOf: url)
                 

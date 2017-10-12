@@ -9,15 +9,21 @@
 import UIKit
 
 class QuoteView: UIView {
-
     
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var quote: UILabel!
+    
+    @IBOutlet weak var quoteAuthor: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var cameraButton: UIButton!
     
     
+
+
+    
+
     
     
 
