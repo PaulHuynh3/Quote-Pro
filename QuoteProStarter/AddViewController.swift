@@ -17,7 +17,7 @@ class AddViewController: UIViewController {
     //you make the setter so you can set this as an observer. When the network request finishes the labels& images are set.
     var quoteObject: QuoteObject? {
         didSet {
-            // set labels and imageView
+            // set labels and imageView as observers when the property changes it will update my labels
             self.quoteLabel.text = quoteObject?.quote
             self.quoteAuthor.text = quoteObject?.quoteAuthor
             self.imageView.image = quoteObject?.image
@@ -29,11 +29,8 @@ class AddViewController: UIViewController {
 
         NetworkRequest.generateRandomQuote { (quoteObject: QuoteObject) in
             print(#line, quoteObject)
-            print("3")
             NetworkRequest.fetchImage(completion: { (data: Data) in
-                print("2")
                 OperationQueue.main.addOperation {
-                    print("1")
                     let image = UIImage(data:data)
                     quoteObject.image = image
                     //set the labels and image inside the mainqueue
@@ -54,14 +51,12 @@ class AddViewController: UIViewController {
     @IBAction func generateQuoteTapped(_ sender: UIButton) {
         NetworkRequest.generateRandomQuote { (quoteObject: QuoteObject) in
             OperationQueue.main.addOperation {
+                print(#line, quoteObject)
+                //set the current view equal to my current property quote.. my property quote is constantly changing everytime i generate new quote.
                 self.quoteLabel.text = quoteObject.quote
                 self.quoteAuthor.text = quoteObject.quoteAuthor
             }
         }
-        
-        
-        
-        
         
     }
     
@@ -69,7 +64,12 @@ class AddViewController: UIViewController {
     @IBAction func changePictureTapped(_ sender: UIButton) {
         NetworkRequest.fetchImage { (data:Data) in
             OperationQueue.main.addOperation {
-            self.imageView.image = UIImage(data: data)
+            let image = UIImage(data: data)
+            //save the image to my quote.image property
+            self.quoteObject?.image = image
+            //change the current imageview with this image
+            self.imageView.image = image
+
             }
  
         }
@@ -77,7 +77,7 @@ class AddViewController: UIViewController {
     }
 
     
-//SAVE button is attached to the unwind Segue
+//SAVE button is attached to the unwind Segue which is reponsible for saving the image and the qutoe!... unwindSegue is found in MainViewController.
 
     
     

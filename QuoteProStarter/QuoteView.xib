@@ -57,27 +57,27 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opw-tb-1pR">
-                    <rect key="frame" x="0.0" y="273.5" width="375" height="120"/>
+                    <rect key="frame" x="0.0" y="184" width="375" height="209"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1d2-lf-2iL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-o0-qVr">
-                                <rect key="frame" x="8" y="8" width="359" height="104"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="8" y="0.0" width="359" height="201"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Rze-o0-qVr" firstAttribute="leading" secondItem="1d2-lf-2iL" secondAttribute="leading" constant="8" id="3UY-70-X02"/>
-                            <constraint firstItem="Rze-o0-qVr" firstAttribute="top" secondItem="1d2-lf-2iL" secondAttribute="top" constant="8" id="Un1-4t-ZDR"/>
+                            <constraint firstItem="Rze-o0-qVr" firstAttribute="top" secondItem="1d2-lf-2iL" secondAttribute="top" id="Un1-4t-ZDR"/>
                             <constraint firstAttribute="bottom" secondItem="Rze-o0-qVr" secondAttribute="bottom" constant="8" id="cBK-GS-D29"/>
                             <constraint firstAttribute="trailing" secondItem="Rze-o0-qVr" secondAttribute="trailing" constant="8" id="eNi-dg-k03"/>
                         </constraints>
                     </view>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="KQm-NK-hdc"/>
+                        <constraint firstAttribute="height" constant="209" id="KQm-NK-hdc"/>
                     </constraints>
                     <blurEffect style="light"/>
                 </visualEffectView>
@@ -105,7 +105,7 @@
                 <constraint firstAttribute="trailing" secondItem="opw-tb-1pR" secondAttribute="trailing" id="3rd-PG-tiY"/>
                 <constraint firstItem="Wtz-PQ-cEO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8oP-MW-RKi"/>
                 <constraint firstAttribute="bottom" secondItem="zDT-ak-xlN" secondAttribute="bottom" id="G09-Ov-ian"/>
-                <constraint firstItem="opw-tb-1pR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SX0-Fg-nWc"/>
+                <constraint firstItem="opw-tb-1pR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-45" id="SX0-Fg-nWc"/>
                 <constraint firstItem="opw-tb-1pR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vbc-Ba-mqX"/>
                 <constraint firstAttribute="trailing" secondItem="zDT-ak-xlN" secondAttribute="trailing" id="edg-1M-wft"/>
                 <constraint firstItem="zDT-ak-xlN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f39-uD-Nfy"/>
@@ -119,7 +119,7 @@
                 <outlet property="quote" destination="Rze-o0-qVr" id="ZIV-Xl-vtZ"/>
                 <outlet property="quoteAuthor" destination="D5k-KK-QGs" id="du9-xw-a0P"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="52.5"/>
+            <point key="canvasLocation" x="25.5" y="46.5"/>
         </view>
     </objects>
     <resources>

@@ -26,12 +26,14 @@ class MainViewController: UIViewController, UITableViewDataSource {
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
         if let addViewController = segue.source as? AddViewController {
             arrayOfQuotes.append(addViewController.quoteObject!)
+        
+            
             tableView.reloadData()
 
         }
     }
     
-    
+
     
     public func numberOfSections(in tableView: UITableView) -> Int{
         return 1

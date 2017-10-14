@@ -43,12 +43,6 @@ class ViewController: UIViewController {
         present(activity, animated: true)
     }
     
-
-
-
-    
-    
-    
     
 }
 
