@@ -60,10 +60,12 @@ class MainViewController: UIViewController, UITableViewDataSource {
         
         //when i use the unwind for segue pulling just the QuoteObject itself...
         //indexforpath is responsible for the object and breaks it into quote, quoteAuthor, image when the object itself is return
-        cell.quoteLabel.text = quotes.quote
-        cell.quoteAuthorLabel.text = quotes.quoteAuthor
-        cell.saveImageView.image = quotes.image
+        cell.setQuote(quote: quotes)
         
+        //can also set it this way in the cell..
+//        cell.quoteLabel.text = quotes.quote
+//        cell.quoteAuthorLabel.text = quotes.quoteAuthor
+//        cell.saveImageView.image = quotes.image
         
         return cell
     }
@@ -80,11 +82,11 @@ class MainViewController: UIViewController, UITableViewDataSource {
         let detailedView = segue.destination as! ViewController
             
             
-        //indexpath
+        //indexpath for selected row
             
        let indexPath = self.tableView.indexPathForSelectedRow
             
-            //set object equal to the identified row.
+            //set the detailedview's quote object as the current indexpath of arrayofquotes so it will access the correct properties.
         detailedView.quoteObject = arrayOfQuotes[(indexPath?.row)!]
             
         }
