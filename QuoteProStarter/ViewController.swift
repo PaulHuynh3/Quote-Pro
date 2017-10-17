@@ -11,12 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     var quoteObject:QuoteObject?
-        
-//        didSet{
-//            quoteView.quote.text = quoteObject?.quote
-//            quoteView.quoteAuthor.text = quoteObject?.quoteAuthor
-//            quoteView.imageView.image = quoteObject?.image
-//        }
 
     
     var quoteView: QuoteView!

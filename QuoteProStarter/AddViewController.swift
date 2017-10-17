@@ -14,7 +14,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var quoteAuthor: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
-    //you make the setter so you can set this as an observer. When the network request finishes the labels& images are set.
+    //you make the setter so you can set this as an observer. When the network request finishes the labels& images are set and changed.
     var quoteObject: QuoteObject? {
         didSet {
             // set labels and imageView as observers when the property changes it will update my labels

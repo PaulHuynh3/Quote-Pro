@@ -27,7 +27,6 @@ class MainViewController: UIViewController, UITableViewDataSource {
         if let addViewController = segue.source as? AddViewController {
             arrayOfQuotes.append(addViewController.quoteObject!)
         
-            
             tableView.reloadData()
 
         }
@@ -80,8 +79,13 @@ class MainViewController: UIViewController, UITableViewDataSource {
          //has to identify the view controller
         let detailedView = segue.destination as! ViewController
             
+            
+        //indexpath
+            
+       let indexPath = self.tableView.indexPathForSelectedRow
+            
             //set object equal to the identified row.
-        detailedView.quoteObject = arrayOfQuotes[(self.tableView.indexPathForSelectedRow?[0])!]
+        detailedView.quoteObject = arrayOfQuotes[(indexPath?.row)!]
             
         }
         
